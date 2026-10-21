@@ -1,0 +1,9 @@
+[
+  { "label": "Banco do Brasil", "value": "001" },
+  { "label": "Bradesco", "value": "237" },
+  { "label": "Caixa Economica Federal", "value": "104" },
+  { "label": "Itau", "value": "341" },
+  { "label": "Santander", "value": "033" },
+  { "label": "Nubank", "value": "260" },
+  { "label": "Inter", "value": "077" }
+]

@@ -1,0 +1,22 @@
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Variaveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Saidas de build e testes
+build/
+coverage/
+.cache/
+
+# Logs e arquivos temporarios
+*.log
+.DS_Store
+Thumbs.db
+
+# Uploads gerados pela aplicacao
+ws/public/uploads/*
+!ws/public/uploads/.gitkeep

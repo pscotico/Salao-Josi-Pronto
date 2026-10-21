@@ -1,0 +1,67 @@
+body.cliente-profile-page,
+body.cliente-profile-page #root {
+  min-height: 100%;
+  height: auto;
+  overflow: auto;
+}
+
+body.cliente-profile-page #root {
+  position: static;
+}
+
+.cliente-perfil {
+  min-height: 100vh;
+  padding: 28px 18px;
+  background: #f5f6f7;
+}
+
+.cliente-perfil__panel {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid rgba(33, 35, 47, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(33, 35, 47, 0.08);
+}
+
+.cliente-perfil__eyebrow {
+  color: #7b2cbf;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cliente-perfil h1 {
+  margin: 8px 0 4px;
+  color: #21232f;
+}
+
+.cliente-perfil p {
+  color: #6b7280;
+}
+
+.cliente-perfil__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.cliente-perfil__actions a,
+.cliente-perfil__actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  color: #ffffff;
+  background: #7b2cbf;
+  border: 0;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.cliente-perfil__actions button {
+  background: #21232f;
+}

@@ -1,0 +1,323 @@
+body.login-page,
+body.login-page #root {
+  min-height: 100%;
+  height: auto;
+  overflow: auto;
+}
+
+body.login-page #root {
+  position: static;
+}
+
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+  background:
+    linear-gradient(135deg, rgba(13, 15, 22, 0.76), rgba(43, 18, 37, 0.72)),
+    url('../../../public/images/salao-capa.jpg') center/cover no-repeat;
+}
+
+.login-panel {
+  width: min(100%, 520px);
+  padding: 30px;
+  color: #ffffff;
+  background: rgba(16, 18, 26, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(18px);
+  animation: login-panel-in 0.45s ease-out both;
+}
+
+.login-panel__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.login-panel__brand img {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 8px;
+}
+
+.login-panel__brand span,
+.login-panel__heading h1 {
+  display: block;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.login-panel__brand span {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.login-panel__brand small,
+.login-panel__heading p,
+.login-access__option small {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.login-panel__eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #06d6a0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.login-panel__heading h1 {
+  max-width: 420px;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.login-panel__heading p {
+  margin: 12px 0 0;
+}
+
+.login-access {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.login-access__option {
+  min-height: 142px;
+  padding: 16px;
+  text-align: left;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.login-access__option:hover,
+.login-access__option:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(6, 214, 160, 0.7);
+  outline: none;
+}
+
+.login-access__option.is-active {
+  background: rgba(6, 214, 160, 0.16);
+  border-color: #06d6a0;
+  box-shadow: inset 0 0 0 1px rgba(6, 214, 160, 0.55);
+}
+
+.login-access__option .mdi {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 30px;
+  color: #06d6a0;
+}
+
+.login-access__option strong,
+.login-access__option small {
+  display: block;
+}
+
+.login-access__option strong {
+  margin-bottom: 6px;
+  line-height: 1.18;
+}
+
+.login-mode {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  padding: 5px;
+  margin: -8px 0 22px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.login-mode button {
+  min-height: 42px;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 800;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.login-mode button.is-active {
+  color: #11141d;
+  background: #06d6a0;
+}
+
+.login-form {
+  display: grid;
+  gap: 16px;
+}
+
+.login-form__helper {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+}
+
+.login-form__row {
+  display: grid;
+  grid-template-columns: 1fr 0.86fr;
+  gap: 12px;
+}
+
+.login-form label {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.login-form__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.login-form__input:focus-within {
+  border-color: #06d6a0;
+  box-shadow: 0 0 0 4px rgba(6, 214, 160, 0.16);
+}
+
+.login-form__input .mdi {
+  color: #7b2cbf;
+  font-size: 21px;
+}
+
+.login-form__input input,
+.login-form__input select {
+  width: 100%;
+  height: 100%;
+  color: #161821;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.login-form__input select {
+  cursor: pointer;
+}
+
+.login-form__message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 12px;
+  color: #ffe8e8;
+  background: rgba(214, 40, 40, 0.18);
+  border: 1px solid rgba(214, 40, 40, 0.38);
+  border-radius: 8px;
+}
+
+.login-form__message.is-success {
+  color: #dffdf4;
+  background: rgba(6, 214, 160, 0.14);
+  border-color: rgba(6, 214, 160, 0.36);
+}
+
+.login-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 54px;
+  color: #11141d;
+  font-weight: 900;
+  background: #06d6a0;
+  border: 0;
+  border-radius: 8px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.login-form__submit:hover:not(:disabled),
+.login-form__submit:focus-visible {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  outline: none;
+}
+
+.login-form__submit:disabled {
+  cursor: wait;
+  opacity: 0.82;
+}
+
+.login-form__spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(17, 20, 29, 0.22);
+  border-top-color: #11141d;
+  border-radius: 50%;
+  animation: login-spin 0.7s linear infinite;
+}
+
+@keyframes login-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes login-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 620px) {
+  .login-shell {
+    align-items: stretch;
+    padding: 18px;
+  }
+
+  .login-panel {
+    padding: 22px;
+  }
+
+  .login-panel__heading h1 {
+    font-size: 28px;
+  }
+
+  .login-access {
+    grid-template-columns: 1fr;
+  }
+
+  .login-access__option {
+    min-height: 118px;
+  }
+
+  .login-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .login-mode {
+    grid-template-columns: 1fr;
+  }
+}

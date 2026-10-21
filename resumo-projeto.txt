@@ -1,0 +1,42 @@
+RESUMO DO PROJETO — SALÃO JOSI
+
+O Salão Josi é um sistema web para gerenciamento de um salão de beleza e para que clientes consultem serviços e façam agendamentos. O sistema possui uma área administrativa para a gestão do salão e uma área voltada aos clientes, com acesso controlado por tipo de usuário.
+
+PRINCIPAIS FUNCIONALIDADES
+- Visualização e gerenciamento de agendamentos.
+- Cadastro e manutenção de clientes.
+- Cadastro e manutenção de colaboradores.
+- Gerenciamento de serviços e produtos.
+- Configuração dos horários de atendimento.
+- Cadastro e edição das informações do salão.
+- Acesso de clientes para realizar agendamentos e consultar o perfil.
+- Login e cadastro de clientes, além de recursos para recuperação de senha por e-mail.
+- Envio e disponibilização de arquivos enviados ao sistema.
+
+TECNOLOGIAS
+- Frontend: React e JavaScript, com React Router para navegação e Redux/Redux Saga para estado e operações assíncronas.
+- Interface: componentes e estilos com RSuite, CSS e calendário de agendamentos.
+- Comunicação com a API: Axios.
+- Backend: Node.js e Express.
+- Banco de dados: MongoDB, acessado com Mongoose.
+- Autenticação: tokens JWT.
+- Serviços de apoio presentes no backend: envio de e-mails, armazenamento de arquivos na AWS e integração com Pagar.me.
+
+ESTRUTURA
+- web/: aplicação React, páginas, componentes, estilos e gerenciamento de estado.
+- ws/: API Express, rotas, modelos do banco, autenticação e serviços do backend.
+- arquivo-do-site-drawio-com/: diagrama do projeto.
+
+COMO EXECUTAR LOCALMENTE
+1. Instale Node.js e npm e disponibilize uma instância do MongoDB.
+2. Na pasta ws, instale as dependências com npm install.
+3. Configure o arquivo .env do backend, incluindo MONGODB_URI. Configure também as credenciais de e-mail se for usar a recuperação de senha.
+4. Inicie o backend na pasta ws com npm start. A API utiliza a porta 8000.
+5. Na pasta web, instale as dependências com npm install.
+6. Inicie o frontend na pasta web com npm start. Por padrão, ele utiliza http://localhost:8000 como endereço da API; esse endereço pode ser alterado com REACT_APP_API_URL.
+7. Para gerar a versão de produção do frontend, execute npm run build na pasta web.
+
+OBSERVAÇÕES
+- Não compartilhe nem publique arquivos .env, senhas, tokens ou outras credenciais.
+- Os arquivos enviados ficam em ws/public/uploads e não devem ser publicados como parte do repositório.
+- O backend depende de uma configuração válida do MongoDB para funcionar.

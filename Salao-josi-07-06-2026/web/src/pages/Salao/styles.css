@@ -1,0 +1,150 @@
+.salao-admin {
+  background: #f5f6f7;
+  height: calc(100vh - 60px) !important;
+  min-width: 0;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+.salao-admin__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.salao-admin__header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.salao-admin__eyebrow {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.salao-admin__grid {
+  display: grid;
+  gap: 16px;
+}
+
+.salao-admin__section,
+.salao-admin__preview {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(33, 35, 47, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(33, 35, 47, 0.06);
+}
+
+.salao-admin__section h3 {
+  margin: 0 0 16px;
+  color: #21232f;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.salao-admin__section label {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.salao-admin__section b {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.salao-admin__upload {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 42px;
+  margin: 8px 0 0 !important;
+  color: #ffffff;
+  background: #21232f;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 800;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.salao-admin__upload:hover {
+  background: #343747;
+  transform: translateY(-1px);
+}
+
+.salao-admin__upload input {
+  display: none;
+}
+
+.salao-admin__alert {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.salao-admin__alert.is-error {
+  color: #9f1239;
+  background: #ffe4e6;
+}
+
+.salao-admin__alert.is-success {
+  color: #047857;
+  background: #d1fae5;
+}
+
+.salao-admin__preview {
+  margin-top: 16px;
+}
+
+.salao-admin__preview-cover {
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 24px;
+  color: #ffffff;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.salao-admin__preview-cover img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.salao-admin__preview-cover span,
+.salao-admin__preview-cover small {
+  display: block;
+}
+
+.salao-admin__preview-cover span {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.salao-admin__preview-cover small {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 768px) {
+  .salao-admin__header {
+    display: block;
+  }
+
+  .salao-admin__header button {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
