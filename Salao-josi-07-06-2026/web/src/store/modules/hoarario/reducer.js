@@ -1,7 +1,7 @@
 import { produce } from 'immer';
 import types from './types';
 const INITIAL_STATE = {
-  behavior: 'create', // create, update, read
+  behavior: 'create',
   components: {
     confirmDelete: false,
     drawer: false,

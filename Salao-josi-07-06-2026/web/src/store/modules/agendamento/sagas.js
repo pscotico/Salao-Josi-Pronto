@@ -1,5 +1,5 @@
-import { takeLatest, all, call, put } from 'redux-saga/effects'; // Guilherme alterei essa parte pq nao estava igual o correto , estava assim import { all, call, takeLatest } from 'redux-saga/effects'; //
-import { updateAgendamento } from './actions'; //Guilherme #4 02:06:00 //
+import { takeLatest, all, call, put } from 'redux-saga/effects';
+import { updateAgendamento } from './actions';
 import  types from './types'
 import api from '../../../services/api';
 import consts from '../../../consts';
@@ -25,4 +25,4 @@ export function* filterAgendamento({ start, end }) {
   }
 }
 
-export default all([takeLatest(types.FILTER_AGENDAMENTOS , filterAgendamento)]); // GUILHERME #4 1:57:15 //
+export default all([takeLatest(types.FILTER_AGENDAMENTOS , filterAgendamento)]);

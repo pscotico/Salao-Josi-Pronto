@@ -22,7 +22,7 @@ const colaborador = new Schema({
         required: true
     },
     dataNascimento: {
-        type: String, //YYYY-MM-DD
+        type: String,
         required: true
     },
     sexo: {

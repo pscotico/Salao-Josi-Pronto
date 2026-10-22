@@ -19,15 +19,15 @@ const servico = new Schema({
             required: true,
         },
          comissao: {
-            type: Number, // % de comissao sobre o preco
+            type: Number,
             required: true,
         },
          duracao: {
-            type: Date, // guilherme #3 3:18:57 tava como number //
+            type: Date,
             required: true,
         },
          recorrencia: {
-            type: Number, // periodo de refacao  do servico em dias
+            type: Number,
             required: true,
         },
         descricao: {

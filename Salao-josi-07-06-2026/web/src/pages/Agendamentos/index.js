@@ -3,14 +3,14 @@ import { Calendar, momentLocalizer } from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment'
 import { useDispatch ,useSelector } from 'react-redux';
-import { filterAgendamentos } from '../../store/modules/agendamento/actions'; // Guilherme #4 1:59:54//
-import util from '../../util';  // Guilherme #42:12:00 //
+import { filterAgendamentos } from '../../store/modules/agendamento/actions';
+import util from '../../util';
 
 const localizer = momentLocalizer(moment);
 
 const Agendamentos = () => {
   const dispatch = useDispatch();
-const { agendamentos } = useSelector((state) => state.agendamento); //Guilherme #4 02:10:52//
+const { agendamentos } = useSelector((state) => state.agendamento);
 
 const formatEventos = agendamentos.map((agendamento) => ({
   title: `${agendamento.servicoId.titulo} - ${agendamento.clienteId.nome} - ${agendamento.colaboradorId.nome}`,
@@ -70,7 +70,7 @@ const formatEventos = agendamentos.map((agendamento) => ({
   const { start, end } = formatRange(periodo);
   dispatch(filterAgendamentos(start, end));
 }}
-           events={formatEventos} //Guilherme #4 2:13:00 mudei essa linha \\
+           events={formatEventos}
            defaultView='week'
            selectable
           popup

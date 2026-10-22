@@ -16,13 +16,13 @@ const cliente = new Schema({
     },
     senha: {
         type: String,
-        default: null, // guilherme #3 2:05:38 //
+        default: null,
     },
     foto: {
-        type: String, // Guilherme  apaguei o "required: true" #3 2:05:41 //
+        type: String,
     },
     dataNascimento: {
-        type: String, //YYYY-MM-DD
+        type: String,
         required: true
     },
     sexo: {
@@ -52,7 +52,7 @@ const cliente = new Schema({
     documento: {
        tipo:{
         type: String,
-        enum: ['cpf', 'cnpj'], // guilherme  tive que alterar esse enum no video #3 1:55:53 o original estava assim enum: ['individual', 'corporantion'], //
+        enum: ['cpf', 'cnpj'],
         required: true              
         },
         numero:{
@@ -68,7 +68,7 @@ const cliente = new Schema({
         numero: String,
         pais: String,
     },
-    customerId: {    //GUILHERME #3 2:07:32 //
+    customerId: {
         type: String,
         required: true,
 
