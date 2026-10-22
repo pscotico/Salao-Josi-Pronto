@@ -35,15 +35,3 @@ A API escuta na porta `8000`.
 5. Para gerar a versão de produção: `npm run build`.
 
 Por padrão, o frontend chama `http://localhost:8000`. Configure `REACT_APP_API_URL` para usar outro endereço.
-
-## Antes de publicar no GitHub
-
-- Não envie arquivos `.env`, senhas, tokens ou credenciais.
-- Configure as variáveis de ambiente no ambiente de hospedagem.
-- Não reutilize segredos de desenvolvimento; configure `JWT_SECRET` e, se necessário, as credenciais administrativas fora do repositório.
-- Os arquivos enviados pelos usuários para `ws/public/uploads/` não são versionados.
-- Dependências (`node_modules`) não são incluídas; instale-as com `npm install`.
-
-## Observação importante sobre segurança
-
-As credenciais do MongoDB que estavam no código original foram removidas e substituídas por `MONGODB_URI`. Como a senha antiga estava escrita diretamente no código, troque/rotacione essa senha no MongoDB Atlas antes de continuar usando o banco.
